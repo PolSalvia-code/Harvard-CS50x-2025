@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+
+                // QUESTION 1
+
+                const q1Form = document.getElementById("q1");
+                const q1Feedback = document.getElementById("q1-feedback");
+                const CORRECT_ANSWER1 = "HTML";
+
+                //Selects all the buttons in the form
+                const buttons = q1Form.querySelectorAll("button");
+
+                buttons.forEach(button => {
+                    button.addEventListener("click", () => {
+
+                    // Clean the last colrs
+                    buttons.forEach(b => {
+                        b.classList.remove("correct", "incorrect");
+                    });
+
+                    // Checks if the answer is correct
+                    if (button.value === CORRECT_ANSWER1) {
+                        button.classList.add("correct");
+                        q1Feedback.textContent = "Correct!";
+                    } else {
+                        button.classList.add("incorrect");
+                        q1Feedback.textContent = "Incorrect";
+                    }
+                    });
+                });
+
+                // QUESTION 2
+
+
+
+                const q2Form = document.getElementById("q2");
+                const q2Feedback = document.getElementById("q2-feedback");
+                const CORRECT_ANSWER2 = "CSS";
+                const Q2_text = q2Form.querySelector('input[name="text1"]'); //user input
+
+
+                q2Form.addEventListener("submit", (e) => {
+                    e.preventDefault();
+                    // Clean previous color
+                    Q2_text.classList.remove("correct", "incorrect");
+
+                    // Checks if the answer is correct
+                    if (Q2_text.value.trim().toLowerCase() === CORRECT_ANSWER2.toLowerCase()) {
+                        Q2_text.classList.add("correct");
+                        q2Feedback.textContent = "Correct!";
+                    } else {
+                        Q2_text.classList.add("incorrect");
+                        q2Feedback.textContent = "Incorrect";
+                    }
+                });
+                q2Form.addEventListener("input", () => {
+                    // Clean previous color
+                    Q2_text.classList.remove("correct", "incorrect");
+                    q2Feedback.textContent = "";
+                });
+        });
+
+
+
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <form id = "q1">
+                    <h3>What is the language used to structure a web page?</h3>
+
+                    <button type="button" value="HTML">HTML</button>
+                    <button type="button" value="CSS">CSS</button>
+                    <button type="button" value="JavaScript">JavaScript</button>
+
+                    <p id="q1-feedback"></p>
+                </form>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <form id ="q2">
+                    <h3>Which language is used to style a web page?</h3>
+                    <input type = "text" name = "text1" placeholder = "Answer the question here">
+                    <button type="submit">Check</button>
+                    <p id="q2-feedback"></p>
+                </form>
+
+            </div>
+        </div>
+    </body>
+</html>

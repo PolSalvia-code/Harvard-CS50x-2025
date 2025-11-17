@@ -1,0 +1,2 @@
+1. Their audio aura is energetic and positive. The songs have high average energy, valence, and danceability, so the listener probably likes happy and lively music.
+2. It’s not very accurate because it only looks at averages of three features and ignores things like lyrics, tempo, and how often each song was played. It could be improved by adding more data and giving more weight to the songs the listener played most.

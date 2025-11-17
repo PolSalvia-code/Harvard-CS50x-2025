@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>Pol Salvia | Portfolio</title>
+
+    </head>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const avatarVideo = document.getElementById("avatar-video");
+
+            avatarVideo.play();
+
+            // Paused video
+            avatarVideo.addEventListener("ended", () => {
+                avatarVideo.pause();
+                avatarVideo.currentTime = 0;
+            });
+
+            // When you hover over it → play
+            avatarVideo.addEventListener("mouseenter", () => {
+                avatarVideo.currentTime = 0;
+                avatarVideo.play();
+            });
+
+            // When you take it out → put it back to second 0 and pause
+            avatarVideo.addEventListener("mouseleave", () => {
+                avatarVideo.pause();
+                avatarVideo.currentTime = 0;
+            });
+        });
+    </script>
+    <body>
+        <header class="navbar-custom">
+            <div class="container text-center py-3">
+                <a href="index.html" class="nav-btn mx-3 active">Home</a>
+                <a href="profile.html" class="nav-btn mx-3">Profile</a>
+                <a href="beyond.html" class="nav-btn mx-3">Beyond</a>
+                <a href="contact.html" class="nav-btn mx-3">Contact</a>
+            </div>
+        </header>
+
+        <hr class="divider">
+
+        <main class="container mt-5 d-flex align-items-center justify-content-between flex-wrap">
+            <div class="text-section">
+                <h1 class="mb-3">👋 Hi, I'm Pol Salvia Argilés</h1>
+
+                <p class="mb-4">I define myself as a curious, open-minded, and independent thinker.</p>
+                <p class="mb-4">I’m passionate about technology, entrepreneurship, and finance, and I have a genuine curiosity to understand things from the ground up — to grasp how the world works, both through human dynamics and scientific principles.</p>
+                <p class="mb-4">This website is a way to share a bit about who I am and what’s brought me here.</p>
+            </div>
+
+            <div class="avatar-container text-center">
+                <video id="avatar-video" src="files/emogi_Pol_video.mp4" muted playsinline></video>
+            </div>
+        </main>
+
+    </body>
+</html>

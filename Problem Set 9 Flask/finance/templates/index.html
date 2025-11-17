@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Index
+{% endblock %}
+
+{% block main %}
+<div class="container text-center mt-4">
+    <h3 class="mb-4">Stock Index current Information</h3>
+
+    <table class="table table-bordered w-50 mx-auto">
+        <thead class="table-light">
+            <tr>
+                <th>Company</th>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Current Price</th>
+                <th>Total value</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for tab in table %}
+            <tr>
+                    <td>{{ tab.name }}</td>
+                    <td>{{ tab.symbol }}</td>
+                    <td>{{ tab.shares}}</td>
+                    <td>{{ tab.current_price}}</td>
+                    <td>{{ tab.total_value}}</td>
+            </tr>
+            {% endfor %}
+
+            <tr>
+                <td colspan="4" class="text-end"><strong>Cash</strong></td>
+                <td>{{ cash | usd }}</td>
+            </tr>
+
+            <tr class="table-light">
+                <td colspan="4" class="text-end"><strong>TOTAL</strong></td>
+                <td><strong>{{ grand_total | usd }}</strong></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

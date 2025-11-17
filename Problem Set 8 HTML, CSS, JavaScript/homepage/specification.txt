@@ -1,0 +1,14 @@
+HTML tags used (10 examples):
+<header>, <main>, <h1>, <p>, <a>, <img>, <div>, <hr>, <ul>, <video>
+
+CSS selectors (5 examples):
+body, .navbar-custom, .nav-btn, .divider, .avatar-container
+
+CSS properties (5 examples):
+background-color, color, font-size, margin, border-radius
+
+JavaScript feature:
+Added interactivity to the avatar video — it plays on hover and pauses when the mouse leaves.
+
+Bootstrap feature:
+Used Bootstrap’s grid system (container, row, col-md-6) and utility classes (text-center, mt-5, mb-4, btn, d-flex) for layout and responsive design.
