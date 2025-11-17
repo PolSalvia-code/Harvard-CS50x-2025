@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: When sorting a pre-sorted array, bubble sort demonstrates its optimal performance characteristics, requiring the minimum number of swap operations. This results in notably reduced execution time when compared to randomly distributed or reverse-ordered datasets.
+
+sort2 uses: Merge Sort
+
+How do you know?: This algorithm corresponds to merge sort due to its consistent O(n log n) time complexity across all input scenarios, regardless of array size or initial order. In contrast to selection and bubble sort, which exhibit O(n²) performance, merge sort demonstrates significantly superior and stable efficiency. This consistent performance profile allows us to confidently identify it as the merge sort algorithm
+
+sort3 uses: Selection Sort
+
+How do you know?: This algorithm corresponds to Selection sort, which exhibits relatively consistent performance across different input scenarios - sorted, reverse-ordered, and randomized arrays. Notably, we can observe how its execution time scales significantly with array size, demonstrating the characteristic O(n²) time complexity that makes bubble sort less efficient for larger datasets.
